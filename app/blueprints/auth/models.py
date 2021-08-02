@@ -20,6 +20,7 @@ class User(UserMixin,db.Model):
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.email = data['email']
+        self.icon = data['icon']
         self.password = self.hash_password(data['password'])
         self.save()
 

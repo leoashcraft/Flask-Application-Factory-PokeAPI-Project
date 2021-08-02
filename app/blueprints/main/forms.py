@@ -6,5 +6,5 @@ class SearchForm(FlaskForm):
     class Meta:
         csrf = False
     search = StringField('Search', validators=[DataRequired()])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Search')
     

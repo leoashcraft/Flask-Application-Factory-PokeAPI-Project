@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/pokemon.css')}}">
+{% endblock %}
 {% block title %}
 Pokemon API Lookup
 {% endblock %}
@@ -19,14 +22,14 @@ Pokemon API Lookup
   <div class="col"></div>
 </div>
 {% else %}
-<div class="container">
-  <div class="row align-items-start">
-    <div class="col">
+    <div class='pokemoncontent'>
+        <div class='pokemoncontainer'>
+          <div class='right_top'>
       {% if sprite %}
         <img src="{{sprite}}" class="pokesprite">
       {% endif %}
-    </div>
-    <div class="col">
+            </div>  
+          <div class='left_bottom'>
     <div id="rcorners3">
     <div id="content">
       {% if stats %}
@@ -54,9 +57,9 @@ Pokemon API Lookup
 {% endif %}
 </div>
 </div>
+            </div>
+            
+        </div>
     </div>
-    <div class="col">
-    </div>
-  </div>
   {% endif %}
 {% endblock %}

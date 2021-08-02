@@ -1,5 +1,10 @@
 .container{
-    margin: 50px 30px;
+    margin-top: 30px;
+}
+
+.reg-avatars {
+    display: flex;
+    justify-content:space-between;
 }
 
 .logo{

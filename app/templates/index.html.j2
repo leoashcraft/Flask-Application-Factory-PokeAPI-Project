@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
 {% block title %}
 Fakebook
 {% endblock %}
 {% block content %}
-<div class="container">
-  <div class="row align-items-start">
-    <div class="col">
+    <div class='indexcontent'>
+        <div class='indexcontainer'>
+          <div class='right_top'>
+
+            </div>  
+          <div class='left_bottom'>
+        {% if current_user.is_authenticated %}
+                <h3>Hello, {{current_user.first_name}}!</h3><br>
+        {% else %}
+        {% endif %}
         <img src="{{url_for('static',filename='group.jpg')}}" class="catch"><br /><br />
         {% if current_user.is_authenticated %}
         <h5>Pokemon Search:</h5>
@@ -21,7 +31,8 @@ Fakebook
 </h5>
 
         {% endif %}
+            </div>
+            
+        </div>
     </div>
-    <div class="col"></div>
-</div>
 {% endblock %}
